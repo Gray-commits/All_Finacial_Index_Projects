@@ -8,4 +8,4 @@ Housing all financial-related projects exploring the intersection between `R` an
 
 <img src="Images\TFA Screenshot.png"/>
 
-2.  
+3. 
