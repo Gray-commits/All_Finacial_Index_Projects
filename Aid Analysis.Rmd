@@ -1,1 +1,87 @@
+# **Project Documentation**
 
+## [Analysis Narrative]{.underline}
+
+In a March 2023 [publication](https://www.courthousenews.com/white-house-threatens-to-pull-aid-to-uganda-over-anti-lgbtq-bill/){style="color: orange;"} of The Courthouse News Service, authorities in the White House reportedly threatened to pull aid to Uganda over the passage of a controversial anti-LGBTQ bill. The bill in question proposed heavy sanctions ranging from mere penalties to death sentences for different ranges of LGBTQ 'crimes' committed in Uganda.
+
+As a Data analysts, reading this piece of news shifted my attention toward the number and not necessarily the controversies surrounding the retaliatory proposed sanctions of the White House of Uganda's stand on the need to preserve 'conservative family values' within its territory.
+
+My attention on the numbers birth a personal need to answer questions that were hitherto undisclosed in this piece
+
+1.  How serious is Uganda's dependence on Foreign Aids?
+
+2.  How much has the U.S disbursed in Foreign Aids to warrant threatening Ugandan over the passage of an anti-LGBTQ bill?
+
+3.  If Uganda can be so threatened, what other African countries could get same reaction if they pass a bill the the White House consider 'controversial'?
+
+To answer these questions, I would need more than the narratives in the said publication. I needed a comprehensive report of Foreign Aids to Africa, with special focus on individual countries. To get an accurate picture of Africa's reliance on Foreign Aid, I had to modify the focus of this project to include aid disbursement to Africa's largest economies.
+
+## **Project Focus**
+
+-   Represent a breakdown of United States' Aids disbursement to Africa's largest economies from 2019 to 2022.
+
+## Data Mining
+
+After a few searches, I found a [.gov database](https://www.foreignassistance.gov/data#tab-query "Foreign Aid Database"){style="colour: orange;"} detailing the volume of aid obligations and disbursement to Africa by the United States. Filters incorporated in the warehouse allowed the download of a subset of the data as a `.csv` file. As an `R` enthusiast, this saved me the need to pull out an arsenal of `rvest`, `Rselenium` or `httr` packages for data scrapping. So, the easier way it is then.
+
+Based on GDP volumes and growth rate as reported on different news, I selected the following African countries as the Largest Economies on the continent.
+
+-   Nigeria
+
+-   Egypt
+
+-   South Africa
+
+-   Kenya
+
+-   Morocco
+
+-   Ethiopia
+
+-   Algeria
+
+## Data Cleaning
+
+Data storage in the queried database followed a strict reporting style making it easy to perform little or no Data cleaning procedures. The `.csv` file downloaded from the database pulled in a 15k+ row of neatly arranged data frame with no missing values or nulls.
+
+## Data Analysis in `Ms Excel`
+
+-   **Data Manipulation**
+
+a.  At first glace, the analysis would require multiple levels of aggregation operations for drill down analysis. `Ms Excel` Pivot tables and Look up functions were heavily useful throughout the analysis. As a first task, I created a single-level breakdown of all Aid distribution to the selected African Countries from 2019 - 2022
+
+![Aid Disbursement Per Country](Images/Disbursement%20Per%20Country.png){width="536"}
+
+b.  A quick understanding of the percentage of Aid distribution among the 7 countries (excluding total aid to other countries in Africa) will definitely fit into the visualization section of this project. Creating a bar chart with swapped axis seems to communicate this better. This type of bar chart stack the percentages on one axis and communicate the percentages dynamically with filters and encoded colors for each country.
+
+    ![Percentage Distribution Per Country](Images/BarCharrt%20Analysis.png){width="336"}
+
+    Code Snippet: `=XLOOKUP(B42,$B$7:$B$13,$E$7:$E$13)`
+
+c.  So, how about understanding how each country utilize the aid package every year? Fortunately, the data set captured the aid allocation for this countries. To dynamically visualize these values, multiple look-up tables that directly connected to the main Pivot table are needed (check the picture below)
+
+    ![](Images/Aid%20Utilization%20Per%20Country.png){width="660"}
+
+Code Snippet: `=XLOOKUP($G$40,$G$25:$G$31,$H$25:$H$31,0)`
+
+-   **Dashboard Planning and Design**
+
+    a.  Slicer Design and Dashboard Color Scheme
+
+        Playing around with `Slicer Design` tab in MS Excel and incorporating the dashboard colors produces a nice Slicer that fits perfectly into the Dashboard's 'Solid and Plain' theme.
+
+        ![Slicer Design and Color](Images/Slicer%20Design%20and%20Dashboard%20Colours.png)
+
+    b.  Dynamic Dashboard Titles
+
+        ![Dynamic Titles](Images/Dynamic%20Dashboard%20Titles.png)
+
+## Data Visualization
+
+a.  Dashboard Design
+
+    ![](Images/TFA%20Screenshot.png)
+
+b.  Dashboard Annotated
+
+    ![](Images/TAF%20Analysis%20D.Anotation.jpg)
