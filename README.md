@@ -14,7 +14,11 @@ Check out dashboard interactivity [here](https://github.com/Gray-commits/All_Fin
 
 ## 2. The Bellabeat Case Study: Analyzing Trends in Smart Device Usage
 
-![](Images%5CBellaPNG.png){width="420"}
+<img src="Images\BellaPNG.png" width="595"/>
+
+Data Cleaning: `Microsoft Excel`
+
+EDA, Analysis and Visulization: `R`
 
 Check out project documentation [here](https://www.kaggle.com/code/graciouso/google-capstone-project-the-bellabeat-case-study)
 
