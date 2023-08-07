@@ -8,4 +8,14 @@ Housing all financial-related projects exploring the intersection between `R` an
 
 <img src="Images\TFA Screenshot.png"/>
 
-Check out dashboard interactivity [here](https://github.com/Gray-commits/All_Finacial_Index_Projects/blob/Africa-Big-7/Images/TFA%20Analysis%20gif.gif), and `r markdown` documentation [here](https://github.com/Gray-commits/All_Finacial_Index_Projects/blob/Africa-Big-7/Aid%20Analysis.Rmd).
+Check out dashboard interactivity [here](https://github.com/Gray-commits/All_Finacial_Index_Projects/blob/Africa-Big-7/Images/TFA%20Analysis%20gif.gif), and `R markdown` documentation [here](https://github.com/Gray-commits/All_Finacial_Index_Projects/blob/Africa-Big-7/Aid%20Analysis.Rmd).
+
+------------------------------------------------------------------------
+
+## 2. The Bellabeat Case Study: Analyzing Trends in Smart Device Usage
+
+![](Images%5CBellaPNG.png){width="420"}
+
+Check out project documentation [here](https://www.kaggle.com/code/graciouso/google-capstone-project-the-bellabeat-case-study)
+
+------------------------------------------------------------------------
